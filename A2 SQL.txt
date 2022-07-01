@@ -1,0 +1,140 @@
+Jacob Swineford
+
+-- 1
+select count(distinct Name) from Production.Product
+select distinct name from production.product
+
+-- 2
+select Name
+from (select Name from production.product where productsubcategoryid is not null) dt
+
+-- 3
+select ProductSubcategoryID, count(ProductID) [Counted Products]
+from Production.Product
+group by (ProductSubcategoryID)
+
+-- 4
+select count(productid) from production.product where ProductSubcategoryID is null
+
+-- 5
+select sum(Quantity) [Total Quantity]
+from production.productinventory
+
+-- 6
+select ProductID, sum(Bin + Quantity) [The Sum] 
+from Production.ProductInventory
+where LocationID = 40 and Bin + Quantity < 100
+group by ProductID
+
+-- 7
+select Shelf, ProductID, sum(Bin + Quantity) [The Sum]
+from Production.ProductInventory
+where LocationID = 40 and Bin + Quantity < 100
+group by ProductID, Shelf
+
+-- 8
+select avg(Quantity) [Average Qauntity]
+from Production.ProductInventory
+where LocationID = 10
+
+-- 9
+select ProductID, Shelf, avg(Quantity) [TheAvg]
+from Production.ProductInventory
+group by ProductID, Shelf
+
+-- 10
+select ProductID, Shelf, avg(Quantity) [TheAvg]
+from Production.ProductInventory
+where Shelf != 'N/A'
+group by ProductID, Shelf
+
+-- 11
+select Color, Class, count(1) [The Count], avg(ListPrice) [Avg Price]
+from Production.Product
+where Color is not null and Class is not null
+group by Color, Class
+
+-- 12
+select C.Name Country, P.Name Province
+from Person.CountryRegion C join Person.StateProvince P on C.CountryRegionCode = P.CountryRegionCode
+order by Country
+
+-- 13
+select C.Name Country, P.Name Province
+from Person.CountryRegion C join Person.StateProvince P on C.CountryRegionCode = P.CountryRegionCode
+where C.Name in ('Germany', 'Canada')
+order by Country
+
+-- NORTHWIND ->
+-- 14
+select *
+from Products P join [Order Details] od on p.ProductID = od.ProductID 
+     join Orders o on od.OrderID = o.OrderID
+where o.ShipPostalCode is not null and datediff(year, o.OrderDate, getdate()) < 25
+
+-- 15
+select top 5 O.ShipPostalCode, sum(P.UnitPrice)
+from Products P join [Order Details] od on p.ProductID = od.ProductID 
+     join Orders o on od.OrderID = o.OrderID
+group by O.ShipPostalCode
+having O.ShipPostalCode is not null
+order by sum(P.UnitPrice) Desc
+
+-- 16
+select top 20 O.ShipPostalCode, sum(P.UnitPrice)
+from Products P join [Order Details] od on p.ProductID = od.ProductID 
+     join Orders o on od.OrderID = o.OrderID
+group by O.ShipPostalCode, o.OrderDate
+having datediff(year, o.OrderDate, getdate()) < 25
+order by sum(P.UnitPrice) Desc
+
+-- 17
+select City, count(1) [Number of Customers]
+from Customers
+group by City
+
+-- 18
+select City, count(1) [Number of Customers]
+from Customers
+group by City
+having count(1) > 2
+
+-- 19
+select distinct c.CompanyName 
+from Customers c join Orders o on c.CustomerID = o.CustomerID
+where datediff(day, datefromparts(1998, 1, 1), getdate()) > datediff(day, o.OrderDate, getdate())
+
+-- 20
+select top 20 percent c.CompanyName , o.OrderDate
+from Customers c join Orders o on c.CustomerID = o.CustomerID
+order by o.OrderDate Desc
+
+-- 21
+select c.CompanyName, count(1) as [Count of Orders]
+from Customers c join Orders o on c.CustomerID = o.CustomerID
+group by c.CompanyName
+
+-- 22
+select CustomerID, count(1) as [Count of Orders]
+from Orders
+group by CustomerID 
+having count(1) > 100 -- nothing shows up
+
+-- 23
+select s.CompanyName [Supplier Company Name], sh.CompanyName [Shipper Company Name]
+from Suppliers s, Shippers sh
+order by s.CompanyName
+
+-- 24 ?
+
+-- 25
+select e1.FirstName + ' ' + e1.LastName [First Employee], e2.FirstName + ' ' + e2.LastName [Second Employee],
+	   e1.Title 
+from Employees e1 join Employees e2 on e1.Title = e2.Title
+where e1.FirstName + ' ' + e1.LastName != e2.FirstName + ' ' + e2.LastName
+
+-- 26
+select FirstName + ' ' + LastName [Full Name], (select count(1) from Employees e2 where e1.EmployeeID = e2.ReportsTo)
+from Employees e1
+
+-- 27 ?
