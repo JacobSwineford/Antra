@@ -1,0 +1,83 @@
+Jacob Swineford
+
+-- 1
+select distinct City
+from Employees
+where City in (select City from Customers)
+
+-- 2a
+select distinct City
+from Customers
+where City not in (select City from Employees)
+
+-- 2b
+select distinct City
+from Customers
+where City not in ('Kirkland', 'London', 'Redmond', 'Seattle', 'Tacoma')
+
+-- 3
+select ProductName, (select sum(od.Quantity) from [Order Details] od where od.ProductID = p.ProductID) as [Total Quantity]
+from Products p order by ProductName
+
+-- 4
+select City, count(*) [Total Orders]
+from Customers
+group by City
+
+-- 5a
+select city from customers group by city having count(*) >= 2
+
+-- 5b
+select c.city from (select * from customers) c group by c.city having count(*) >= 2
+
+-- 6
+select c.city,  count(distinct od.ProductID)
+from orders o join customers c on C.customerID = o.CustomerID join [Order Details] od on od.OrderID = o.OrderID
+group by c.city
+having count(distinct od.ProductID) >= 2
+order by c.city
+
+-- 7
+select distinct c.CompanyName, c.City, o.ShipCity
+from Customers c join Orders o on c.customerid = o.customerid
+where c.city != o.shipcity
+
+-- 8 (Average?)
+select top 5 od.Productid [Popular Products (ID)], (select top 1 c.city from Customers c join Orders ord on ord.CustomerID = c.CustomerID
+													join [Order Details] ode on ode.OrderID = ord.OrderID
+													where ode.ProductID = od.ProductID) [Hot City]
+from orders o join [Order Details] od on od.OrderID = o.OrderID
+group by od.productid
+order by count(*) desc
+
+-- 9a
+select city 
+from employees
+where city not in (select c.city from customers c)
+
+-- 9b
+select city
+from employees
+except
+select e.city
+from employees e join customers c on e.city = c.city
+
+-- 10
+-- it does not exist
+select e.city, count(*) [Number of Orders Served], sum(od.Quantity) [Quantity Ordered From]
+from Employees e join orders o on e.EmployeeID = o.EmployeeID join [Order Details] od on o.OrderID = od.OrderID
+group by e.city
+order by count(*) desc
+
+select city 
+from Employees
+where (select top 1 em.city from Employees em
+					join Orders ord on ord.EmployeeID = em.EmployeeID
+					join [Order Details] od on ord.OrderID = od.OrderID 
+					group by em.city order by sum(od.Quantity) desc)
+					= (select top 1 e.city from Employees e join orders o on e.employeeID = o.EmployeeID
+					group by e.city order by count(*) desc)
+
+-- 11
+-- Use of the ROW_NUMBER() function will mark rows as duplicates or not, assisted by OVER(PARTITION BY ..., ..., ...) function.
+-- use this result set as a guide to delete the duplicate records where the result of ROW_NUMBER() is more than 1.
