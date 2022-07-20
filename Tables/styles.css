@@ -1,0 +1,19 @@
+table, td, th {
+    border: 1px solid black;
+}
+
+.head {
+    text-align: center;
+}
+
+.colnames {
+    text-align: center;
+}
+
+.foot {
+    text-align: right;
+}
+
+.fourheight {
+    height: 75px;
+}
