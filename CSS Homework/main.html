@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS practice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>PROBLEM 1</h1> <br>
+    <table style="background-color: rgb(35, 35, 105);">
+        <tr>
+            <td rowspan="2">
+                <img src="toy.PNG" alt="no" style="display: inline; width: 100px; height: 100px;">
+            </td>
+            <td style="text-align: right;">
+                <ul class="navbar">
+                    <li>
+                        <div class="dropdown">
+                            <button class="masked-button">USER -</button>
+                        </div>
+                        <div class="droptent">
+                            <a href="">Jacob</a>
+                        </div>
+                    </li>
+                </ul>
+                <input name="Search..." type="text" style="display: inline;">
+                <button type="button" style="display: inline;">S</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul class="navbar">
+                    <li><a class="link" href="google.com">News</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="masked-button">About the Unversity -</button>
+                            <div class="droptent">
+                                <a href="google.com">Services</a>
+                                <a href="google.com">Pricing</a>
+                                <a href="google.com">Other things?</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="masked-button">training courses -</button>
+                            <div class="droptent">
+                                <a href="google.com">HTML</a>
+                                <a href="google.com">CSS</a>
+                                <a href="google.com">JavaScript</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="link" href="google.com">For Companies</a>
+                    </li>
+                    <li>
+                        <a class="link" href="google.com">Forum</a>
+                    </li>
+                    <li>
+                        <a class="link" href="google.com">Contacts</a>
+                    </li>
+                </ul> 
+            </td>
+        </tr>
+    </table> <br>
+
+    <h1>PROBLEM 2</h1> <br>
+
+    
+
+    <table style="background-color: rgb(121, 120, 124); padding-left: 40px; padding-right: 40px; display: block;">
+        <tr>
+            <td>
+                <ul class="leftbar">
+                    <li class="leftbar-title">Corporate Office:</li>
+                    <li>21355 Ridgetop Circle</li>
+                    <li>Suite #300</li>
+                    <li>Dulles, VA 20156</li>
+                    <li>Ph: 703 994 4545</li>
+                    <li>email: info@antra.net</li>
+                </ul>
+            </td>
+            <td>
+                <ul class="menubar">
+                    <li style="font-size: 22px; font-weight: bold; color: whitesmoke;">Services</li>
+                    <li><a href="google.com">Technology Services</a></li>
+                    <li><a href="google.com">Business Advisory Services</a></li>
+                    <li><a href="google.com">Proffesional Services</a></li>
+                    <li><a href="google.com">Blog</a></li>
+                    <li><a href="google.com">About us</a></li>
+                    <li style="border-bottom: none;"><a href="google.com">Contact us</a></li>
+                </ul>
+            </td>
+            <td>
+                <ul class="menubar">
+                    <li style="font-size: 22px; font-weight: bold; color: whitesmoke;">Resources</li>
+                    <li><a href="google.com">Case Studies</a></li>
+                    <li><a href="google.com">White Papers</a></li>
+                    <li><a href="google.com">Technology Resumes</a></li>
+                    <li><a href="google.com">Top  Technology Trends 2017</a></li>
+                    <li><a href="google.com">Agile Transformations</a></li>
+                    <li style="border-bottom: none;"><a href="google.com">Mobile And Web Development</a></li>
+                </ul>
+            </td>
+            <td>
+                <ul class="endbar">
+                    <li style="font-size: 22px; font-weight: bold; color: whitesmoke; list-style-type: none; text-align: center;">Our Locations</li>
+                    <li><img src="toy.PNG" alt="no" style="width: auto; height: 150px;"></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <div style="background-color: black; display: flex; height: auto; color: whitesmoke; justify-content: space-between; padding-left: 40px;">
+                <div style="text-align: left; display: flex; border: 2px solid white; align-items: center;">
+                    &#x24B8 Antra Inc. All Rights Reserved
+                </div>
+                <ul style="text-align: right display=flex; border: 2px solid white; align-items: center; padding-right: 100px;">
+                    <li style="display: inline;"><a href="facebook.com"><img src="facebook.PNG" alt="no"></a></li> 
+                    <li style="display: inline;"><img src="twitter.PNG" alt="no"></li>
+                    <li style="display: inline;"><img src="LinkedIn.PNG" alt="no"></li>
+                </ul>
+            </div>
+        </tr>
+    </table> <br>
+
+    <h1>PROBLEM 3</h1> <br>
+
+    <div class="topper">
+        <button class="apply">Apply Now</button>
+    </div>
+    <div class="content">
+        <div style="color:rgb(35, 35, 105); font-size: 20px; font-weight: bold;">News</div>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-title">
+                    level 0 starts on the 5th of July!
+                </div>
+                <div class="card-date">
+                    18/06/2014
+                </div>
+                <div class="card-publisher">
+                    Published by: Alexandra Svilarova
+                </div>
+                <img src="toy.PNG" alt="no" class="card-image">
+                <div class="card-flavor">
+                    hi I am flavor text
+                </div>
+                <hr class="card-hr">
+                <div class="card-tags">
+                    <div style="color: rgb(98, 98, 100); display: inline;">Tags:</div>
+                    tag tag tag tag
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">
+                    Summer break - Schedule for level #1
+                </div>
+                <div class="card-date">
+                    18/06/2014
+                </div>
+                <div class="card-publisher">
+                    Published by: Alexandra Svilarova
+                </div>
+                <img src="toy.PNG" alt="no" class="card-image">
+                <div class="card-flavor">
+                    hi I am flavor text
+                </div>
+                <hr class="card-hr">
+                <div class="card-tags">
+                    <div style="color: rgb(98, 98, 100); display: inline;">Tags:</div>
+                    tag tag tag tag
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">
+                    Feedback from Antra Inc Conf MAY 2014
+                </div>
+                <div class="card-date">
+                    18/06/2014
+                </div>
+                <div class="card-publisher">
+                    Published by: Alexandra Svilarova
+                </div>
+                <img src="toy.PNG" alt="no" class="card-image">
+                <div class="card-flavor">
+                    hi I am flavor text
+                </div>
+                <hr class="card-hr">
+                <div class="card-tags">
+                    <div style="color: rgb(98, 98, 100); display: inline;">Tags:</div>
+                    tag tag tag tag
+                </div>
+            </div>
+        </div>
+        <div class="pageturner">
+            <button class="pageturner-number">1</button>
+            <button class="pageturner-number">2</button>
+            <button class="pageturner-number">3</button>
+            <button class="pageturner-number">4</button>
+            <button class="pageturner-number">5</button>
+            <button class="pageturner-number">></button>
+        </div>
+    </div>
+
+    <br>
+    <h1>PROBLEM 4</h1>
+
+    <header class="topper-4">In the Twilight of one's life</header>
+    <div class="navigation-4">
+        <button>HOME</button>
+        <button>ABOUT</button>
+        <button>BLOG</button>
+        <button>GALLERY</button>
+        <button>CONTACT</button>
+    </div>
+    <div class="main-container">
+        <div class="sub-container">
+            <div class="welcome-panel">
+                <h1>Welcome to the Home Page</h1>
+                <p>
+                    <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b> 
+                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+            <div class="products-panel">
+                <h1>Our Free Products</h1>
+                <table class="sub-products-panel">
+                    <tr>
+                        <td rowspan="2"><img src="toy.PNG" alt="no" style="width: 200px; height: 200px;"></td>
+                        <td><b>Just try to find me</b></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <table class="sub-products-panel">
+                    <tr>
+                        <td rowspan="2"><img src="toy.PNG" alt="no" style="width: 200px; height: 200px;"></td>
+                        <td><b>Just try to find me</b></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <table class="sub-products-panel">
+                    <tr>
+                        <td rowspan="2"><img src="toy.PNG" alt="no" style="width: 200px; height: 200px;"></td>
+                        <td><b>Just try to find me</b></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="sub-container2">
+            <div class="news-panel">
+                <h1>News</h1>
+                <div style="margin: 10px">
+                    <b>August 2, 2009</b>
+                    <p style="margin: 1px;">Duis aute irure dolor</p>
+                    <a href="google.com">see more...</a><br><br>
+                    <b>August 2, 2009</b>
+                    <p style="margin: 1px;">Duis aute irure dolor</p>
+                    <a href="google.com">see more...</a><br><br>
+                    <b>August 2, 2009</b>
+                    <p style="margin: 1px;">Duis aute irure dolor</p>
+                    <a href="google.com">see more...</a>
+                </div>
+            </div>
+            <div class="messages-panel">
+                <h1>Messages</h1>
+                <div style="margin: 10px;">
+                    <b>August 2, 2009</b>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <a href="google.com">see all testimonials...</a> <br>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer-4">In the Twilight of one's life Copyright &copy;
+         2 August 2009 |&nbsp;<a href="google.com">XHTML</a>&nbsp;|&nbsp;<a href="google.com">CSS</a> </div>
+
+    
+</body>
+</html>
