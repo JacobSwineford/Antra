@@ -1,0 +1,15 @@
+C:\Users\Jacob\Desktop\Antra\InternetStuff\MVC\AsyncConsole\bin\Debug\net6.0\AsyncConsole.exe
+C:\Users\Jacob\Desktop\Antra\InternetStuff\MVC\AsyncConsole\bin\Debug\net6.0\AsyncConsole.deps.json
+C:\Users\Jacob\Desktop\Antra\InternetStuff\MVC\AsyncConsole\bin\Debug\net6.0\AsyncConsole.runtimeconfig.json
+C:\Users\Jacob\Desktop\Antra\InternetStuff\MVC\AsyncConsole\bin\Debug\net6.0\AsyncConsole.dll
+C:\Users\Jacob\Desktop\Antra\InternetStuff\MVC\AsyncConsole\bin\Debug\net6.0\AsyncConsole.pdb
+C:\Users\Jacob\Desktop\Antra\InternetStuff\MVC\AsyncConsole\obj\Debug\net6.0\AsyncConsole.csproj.AssemblyReference.cache
+C:\Users\Jacob\Desktop\Antra\InternetStuff\MVC\AsyncConsole\obj\Debug\net6.0\AsyncConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jacob\Desktop\Antra\InternetStuff\MVC\AsyncConsole\obj\Debug\net6.0\AsyncConsole.AssemblyInfoInputs.cache
+C:\Users\Jacob\Desktop\Antra\InternetStuff\MVC\AsyncConsole\obj\Debug\net6.0\AsyncConsole.AssemblyInfo.cs
+C:\Users\Jacob\Desktop\Antra\InternetStuff\MVC\AsyncConsole\obj\Debug\net6.0\AsyncConsole.csproj.CoreCompileInputs.cache
+C:\Users\Jacob\Desktop\Antra\InternetStuff\MVC\AsyncConsole\obj\Debug\net6.0\AsyncConsole.dll
+C:\Users\Jacob\Desktop\Antra\InternetStuff\MVC\AsyncConsole\obj\Debug\net6.0\refint\AsyncConsole.dll
+C:\Users\Jacob\Desktop\Antra\InternetStuff\MVC\AsyncConsole\obj\Debug\net6.0\AsyncConsole.pdb
+C:\Users\Jacob\Desktop\Antra\InternetStuff\MVC\AsyncConsole\obj\Debug\net6.0\AsyncConsole.genruntimeconfig.cache
+C:\Users\Jacob\Desktop\Antra\InternetStuff\MVC\AsyncConsole\obj\Debug\net6.0\ref\AsyncConsole.dll
